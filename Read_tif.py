@@ -17,18 +17,19 @@ class READ():
         self.file1 = file1
         self.file2 = file2
 
-K = []        
+file1 = []        
 file1 = []
 file2 = []
 
 
 for i in range(0,10000):
     K=tiff.imread('D:/download/solar/topo3/New Folder/VRT2_SRAD.tif/VRT2_SRAD.tif.%d.tif'%i)
-    S = 0
-    if K.any() == S:
-        file2.append(K)    
+    file1 = [i,K]
+    
+    if K.all() == False:
+        file2.append(file1)    
     else:
-        file1.append(K)
+        file3.append(file1)
     
         
         
